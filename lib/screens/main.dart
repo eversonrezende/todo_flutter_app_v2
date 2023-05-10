@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_flutter_app_v2/data/task_inherited.dart';
 import 'package:todo_flutter_app_v2/screens/initial_screen.dart';
 
 void main() {
@@ -12,10 +13,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.purple,
       ),
-      home: const InitialScreen(),
+      home: TaskInherited(
+        child: const InitialScreen(),
+      ),
     );
   }
 }
